@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login-create.css" />
+    <script>var exports = {};</script>
+    <script src="main.js" type="module"></script>
+    <script src="classes.js" type="module"></script>
+    <title>Log In - MyChurch</title>
+  </head>
+  <body>
+    <header>
+      <h1>Login - My Church</h1>
+      <nav>
+        <a href="login.html"
+          ><h4>Log In</h4>
+          <span></span
+        ></a>
+      </nav>
+    </header>
+    <!-- Login Form -->
+    <section class="form-container">
+      <form onsubmit="return false;">
+        <img src="images/login-img.png" alt="Avatar" />
+        <label for="uname">Username</label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          id="uname"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          required
+        />
+
+        <button type="submit" id="submitlogin">Log In</button>
+
+        <a href="createaccount.html">Don't have an account?</a>
+      </form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="login-create.css" />
+    <script>var exports = {};</script> 
+    <script type="module" src="main.js" ></script>
+    <script src="classes.js" type="module"></script>
+    <title>Create Account - MyChurch</title>
+  </head>
+  <body>
+    <header>
+      <h1>New User - My Church</h1>
+      <nav>
+        <a href="login.html"
+          ><h4>Log In</h4>
+          <span></span
+        ></a>
+      </nav>
+    </header>
+    <!-- Create Form -->
+    <section class="form-container">
+      <form onsubmit="return false;">
+        <h2>Create Account</h2>
+        <label for="uname">Create Username</label>
+        <input
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          id="create-uname"
+          required
+        />
+
+        <label for="password">Create Password</label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="create-pass"
+          required
+        />
+
+        <label for="verify">Verify Password</label>
+        <input
+          type="password"
+          name="verify"
+          id="verify-pass"
+          placeholder="Verify password"
+          required
+        />
+
+        <label for="church-name">Enter Church Name</label>
+        <input
+          type="text"
+          name="church-name"
+          id="church-name"
+          placeholder="Enter Church Name"
+          required
+        />
+
+        <button type="submit" id="createaccount">Create Account</button>
+      </form>
+    </section>
+  </body>
+</html>

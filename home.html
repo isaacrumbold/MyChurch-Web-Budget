@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="login-create.css" />
+    <script>var exports = {};</script> 
+    <script type="module" src="main.js"></script>
+    <script src="budget.js" defer></script>
+    <script src="classes.js" type="module"></script>
+    <title>My Church Budget</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Church Budget</h1>
+      <nav>
+        <a href="index.html">
+          <h4>Log Out</h4>
+          <span></span
+        ></a>
+      </nav>
+    </header>
+    <section>
+      <h1 id="hometitle"></h1>
+      <script>
+        var displaystuff = (name) => {
+          var element = document.getElementById(name);
+          if (element.style.display == "none") {
+            element.style.display = "flex";
+          } else {
+            element.style.display = "none";
+          }
+        };
+      </script>
+      <button
+        type="button"
+        id="addbudget"
+        onClick="displaystuff('createbudget')"
+      >
+        Add Budget Category
+      </button>
+    </section>
+    <section class="form-container" id="createbudget" style="display: none">
+      <form onsubmit="return false;">
+        <h2>Add Budget</h2>
+        <label for="bname">Budget Name</label>
+        <input
+          type="text"
+          placeholder="Enter Budget Name"
+          name="bname"
+          id="create-bname"
+        />
+
+        <label for="bamount">Budget Amount</label>
+        <input
+          type="number"
+          placeholder="Enter Amount"
+          name="bamount"
+          id="create-bamount"
+        />
+
+        <button type="submit" id="createbudgetbtn">
+          Create Budget Category
+        </button>
+        <button
+          type="button"
+          id="cancelbttn"
+          onclick="displaystuff('createbudget')"
+        >
+          Cancel
+        </button>
+      </form>
+    </section>
+    <section id="budgets">
+    
+    </section>
+  </body>
+</html>
