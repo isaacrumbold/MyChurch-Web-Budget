@@ -1,52 +1,99 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Budget = exports.User = void 0;
 //User class: this is used to store a single user's information. 
 //It is stored in local storage as a JSON object.
-export class User {
-    constructor(user, pass, church) {
+var User = /** @class */ (function () {
+    function User(user, pass, church) {
         this.username = user;
         this.password = pass;
         this.churchname = church;
     }
-    set setpassword(thepassword) {
-        this.password = thepassword;
-    }
-    get getpassword() {
-        return this.password;
-    }
-    get getusername() {
-        return this.username;
-    }
-    set setchurchname(thechurch) {
-        this.churchname = thechurch;
-    }
-    get getchurchname() {
-        return this.churchname;
-    }
-}
+    Object.defineProperty(User.prototype, "setpassword", {
+        set: function (thepassword) {
+            this.password = thepassword;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "getpassword", {
+        get: function () {
+            return this.password;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "getusername", {
+        get: function () {
+            return this.username;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "setchurchname", {
+        set: function (thechurch) {
+            this.churchname = thechurch;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(User.prototype, "getchurchname", {
+        get: function () {
+            return this.churchname;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return User;
+}());
+exports.User = User;
 //Budget class: this is used to store a single budget's information.
 //It is stored in local storage as a JSON object.
-export class Budget {
-    constructor(name, amount) {
+var Budget = /** @class */ (function () {
+    function Budget(name, amount) {
         this.budgetname = name;
         this.budgetamount = amount;
         this.spent = 0;
     }
-    get getbudgetname() {
-        return this.budgetname;
-    }
-    set setamount(theamount) {
-        this.budgetamount = theamount;
-    }
-    get getamount() {
-        return this.budgetamount;
-    }
-    set setspent(amount) {
-        this.spent = amount;
-    }
-    get getspent() {
-        return this.spent;
-    }
-    amountremaining() {
-        const remaining = this.budgetamount - this.spent;
+    Object.defineProperty(Budget.prototype, "getbudgetname", {
+        get: function () {
+            return this.budgetname;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Budget.prototype, "setamount", {
+        set: function (theamount) {
+            this.budgetamount = theamount;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Budget.prototype, "getamount", {
+        get: function () {
+            return this.budgetamount;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Budget.prototype, "setspent", {
+        set: function (amount) {
+            this.spent = amount;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Budget.prototype, "getspent", {
+        get: function () {
+            return this.spent;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Budget.prototype.amountremaining = function () {
+        var remaining = this.budgetamount - this.spent;
         return remaining;
-    }
-}
+    };
+    return Budget;
+}());
+exports.Budget = Budget;
