@@ -1,2 +1,5 @@
+#ignoring .js, workspace, notes.txt
+
 *.js
 *.code-workspace
+/notes.txt
